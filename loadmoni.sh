@@ -1,7 +1,14 @@
-########### START ###############
-
-
 #!/bin/bash
+#Script made for Load monitoring
+#Author: Vinod.N K
+#Usage: Internal Load of CPU
+#Distro : Linux -Centos, Rhel, and any fedora
+#Check whether root user is running the script
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+########### START ###############
 
 CUR_TIME=`date +"%A %b %e %r"`
 HOSTNAME=`hostname`
